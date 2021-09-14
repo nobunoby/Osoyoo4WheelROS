@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+  
+  <machine name="raspi" address="192.168.201.131" env-loader="/home/r_user/catkin_ws/devel/env.sh" user="ubuntu" password="Airu0812"/>
+  
+  <node name="joy" pkg="joy" type="joy_node">
+  </node>
+
+  <node name="joy_twist" pkg="teleop_twist_joy" type="teleop_node" output="log">
+    <remap from="/cmd_vel" to="/ugv/cmd_vel" />
+  </node>
+
+  <node machine="raspi" name="arduino" pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM0" output="log" />
+
+</launch>
