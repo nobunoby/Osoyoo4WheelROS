@@ -71,7 +71,7 @@ void loop()
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+/*
 void wheel_vel(float lin_x, float lin_y, float ang_z)
 {
   int fl = (lin_x - lin_y - (WHEEL_SEPARATION_WIDTH + WHEEL_SEPARATION_LENGTH)*ang_z) / WHEEL_RADIUS / 10 * 250;
@@ -84,7 +84,7 @@ void wheel_vel(float lin_x, float lin_y, float ang_z)
   RL(rl);
   RR(rr);
 }
-
+*/
 void FL(int fl)
 {
   int speed;
